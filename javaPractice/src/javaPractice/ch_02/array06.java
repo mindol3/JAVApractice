@@ -5,7 +5,7 @@ public class array06 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*로또 번호 구하기
-		 * 1~45 까지의 임의의 수만 6개 구하면 주옵ㄱ의 가능성이 있다
+		 * 1~45 까지의 임의의 수만 6개 구하면 중복의 가능성이 있다
 		 * */
 		// 45개의 정수값을 저장하기 위한 배열 생성.
 		int[] ball = new int[45];
