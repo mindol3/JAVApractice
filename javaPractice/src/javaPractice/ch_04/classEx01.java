@@ -1,9 +1,12 @@
 package javaPractice.ch_04;
 
+
 public class classEx01 {
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Student s = new Student();
 		s.name = "È«±æµ¿";
 		s.ban = 1;
@@ -15,7 +18,11 @@ public class classEx01 {
 		System.out.println("ÀÌ¸§: " + s.name);
 		System.out.println("ÃÑÁ¡: " + s.getTotal());
 		System.out.println("Æò±Õ: " + s.getAverage());
+		
+		
 	}
+	
+	
 
 }
 
