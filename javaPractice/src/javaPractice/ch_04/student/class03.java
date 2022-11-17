@@ -59,7 +59,7 @@ public class class03 {
 		t.volumeDown();
 		System.out.println("CH:" +t.channel+", VOL:"+ + t.volume); // CH:99, VOL:0
 		
-		t.volume = 100;
+		t.volume = 99;
 		t.channelUp();
 		t.volumeUp();
 		System.out.println("CH:" +t.channel+", VOL:"+ + t.volume); // CH:100, VOL:100
