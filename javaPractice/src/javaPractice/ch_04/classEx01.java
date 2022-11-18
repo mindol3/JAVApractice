@@ -1,6 +1,7 @@
 package javaPractice.ch_04;
 
 
+
 public class classEx01 {
 	
 

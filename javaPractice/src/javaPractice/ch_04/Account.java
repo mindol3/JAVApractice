@@ -1,5 +1,6 @@
 package javaPractice.ch_04;
 
+
 public class Account {
 	String name;
 	String no;
