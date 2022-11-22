@@ -1,4 +1,4 @@
-package javaPractice.ch_05;
+ package javaPractice.ch_05;
 
 class User{
 	private String name;

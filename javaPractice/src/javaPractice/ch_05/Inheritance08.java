@@ -34,7 +34,7 @@ public class Inheritance08 {
 		
 		fe.water();
 		car = fe; // car = (Car)fe; 에서 형변환이 생략된 형태
-		//car.water(); // CAr타입의 참조변수로는 water()를 호출할 수 없음
+//		car.water(); // CAr타입의 참조변수로는 water()를 호출할 수 없음
 		fe2 = (FireEngine)car; // 부모타입에서 자식타입으로 대입할때는 형변환을 해줘야함
 		fe2.water();
 	}
