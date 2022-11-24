@@ -10,6 +10,7 @@ class Score {
 	public void setKor(int kor) {
 		if(kor >= 0 && kor <= 100) {
 			this.kor = kor;
+			System.out.println(kor);
 		}
 		else {
 			System.out.println(kor + " 는 올바른 값 (범위 0~100)이 아닙니다.");

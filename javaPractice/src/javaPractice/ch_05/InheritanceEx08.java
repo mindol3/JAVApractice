@@ -20,6 +20,10 @@ class Tv1 extends Product {
 	public String toString() {
 		return "Tv1";
 	}
+//	@Override
+//	public String toString() {
+//		return "Tv1 [price=" + price + "]";
+//	}
 }
 
 class Computer extends Product {
@@ -43,7 +47,8 @@ class Audio extends Product {
 	}
 }
 
-class Buyer{//고객, 물건을 사는 사람
+class Buyer{
+	//고객, 물건을 사는 사람
 	int money = 1000; // 소유 금액
 	int bonusPoint = 0; // 보너스 점수
 //	ArrayList item = new ArrayList(); // 구입한 제품을 저장하는데 사용될 ArrayList 객체
@@ -129,7 +134,7 @@ public class InheritanceEx08 {
 		b.buy(com);
 		b.buy(aduio);
 		b.summary();
-		System.out.println();
+//		System.out.println();
 //		b.refund(com);
 //		b.summary();
 		
