@@ -1,0 +1,33 @@
+java.lang.ArithmeticException: / by zero
+	at javaPractice.ch_08.trycatch06_1.main(trycatch06_1.java:20)
+예외메시지 : / by zero
+-----------------------------------
+예외발생시간 : Thu Dec 01 10:36:42 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at javaPractice.ch_08.trycatch06_2.main(trycatch06_2.java:22)
+예외메시지 : / by zero
+-----------------------------------
+-----------------------------------
+예외발생시간 : Thu Dec 01 10:36:58 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at javaPractice.ch_08.trycatch06_2.main(trycatch06_2.java:22)
+예외메시지 : / by zero
+-----------------------------------
+-----------------------------------
+예외발생시간 : Thu Dec 01 10:36:59 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at javaPractice.ch_08.trycatch06_2.main(trycatch06_2.java:22)
+예외메시지 : / by zero
+-----------------------------------
+-----------------------------------
+예외발생시간 : Thu Dec 01 10:37:00 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at javaPractice.ch_08.trycatch06_2.main(trycatch06_2.java:22)
+예외메시지 : / by zero
+-----------------------------------
+-----------------------------------
+예외발생시간 : Thu Dec 01 10:37:48 GMT+09:00 2022
+java.lang.ArithmeticException: / by zero
+	at javaPractice.ch_08.trycatch06_2.main(trycatch06_2.java:22)
+예외메시지 : / by zero
+-----------------------------------
