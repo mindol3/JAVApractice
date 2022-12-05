@@ -3,7 +3,7 @@ package javaPractice.ch_09_test;
 public class ShopProduct {
 	Product[] products = new Product[3];
 	
-	public ShopProduct() {
+	ShopProduct() {
 		 products[0] = new Product(1, "블랜딩 커피", 5000);
 		 products[1] = new Product(2, "파나마 게이샤", 15000);
 		 products[2] = new Product(3, "이디오피아 커피", 10000);

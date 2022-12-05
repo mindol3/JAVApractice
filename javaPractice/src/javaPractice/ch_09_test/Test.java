@@ -10,6 +10,7 @@ public class Test {
 		ShopProduct sp = new ShopProduct(); // 상품 관련
 		ShopCart sc = new ShopCart();
 		
+		
 		System.out.println("01. 회원 가입 시작");
 		System.out.println("회원 가입 정보를 입력하세요.");
 		

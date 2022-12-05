@@ -19,11 +19,13 @@ public class ShopCart {
 		while(true) {
 			Scanner stdIn = new Scanner(System.in);
 			System.out.println("구매할 상품의 번호를 입력해 주십시요.>>");
-			int a = Integer.parseInt(stdIn.nextLine());	
-			if(productID != a) {
-				System.out.println("상품번호를 재입력 해주십시요.>>");
-				continue;
-			}
+//			if(productID == a) {
+//				productID = Integer.parseInt(stdIn.nextLine());	
+//			}
+//			else {
+//				System.out.println("상품번호를 재입력 해주십시요.>>");
+//				return;
+//			}
 //			int productID = stdIn.nextInt();
 			System.out.println("상품의 구매 갯수를 입력해 주십시요.>>");
 			cnt = Integer.parseInt(stdIn.nextLine());
