@@ -3,14 +3,12 @@ package javaPractice.ch_11;
  * 변환기의 역할은 서로 다른 두 인터페이스 사이에 통신이 가능하게 하는 것
  */
 class ServiceA{
-	
 	void runWork() {
 		System.out.println("work");
 	}
 }
 
 class ServiceB{
-	
 	void runStudy() {
 		System.out.println("study");
 	}
