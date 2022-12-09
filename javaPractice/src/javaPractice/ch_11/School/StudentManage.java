@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class StudentManage {
 	static Scanner input = new Scanner(System.in);
 	static ArrayList<Student> students = new ArrayList();
-	static String[] className = {"JAVA", "PYTHON", "C"};
+//	static String[] className = {"JAVA", "PYTHON", "C"};
 	
 	static Student findStudentInform(int studentNumber) {
 		for (Student student : students) {
@@ -21,7 +21,7 @@ public class StudentManage {
 	}
 	
 	// 1. 학생 추가 및 수정
-	public static void addStudent() {
+	void addStudent() {
 		System.out.println("학생의 학번을 입력 하세요. >>>");
 		int studentNumber = input.nextInt(); // 학번 입력받음
 		
@@ -43,7 +43,7 @@ public class StudentManage {
 	}
 
 	// 2. 학생 삭제 메뉴
-	public static void removeStudent() {
+	void removeStudent() {
 		System.out.println("학생의 학번을 입력 하세요. >>>");
 		int studentNumber = input.nextInt(); // 학번 입력받음
 		
@@ -58,7 +58,7 @@ public class StudentManage {
 	}
 
 	// 3.수강신청 메뉴
-	public static void addClass() {
+	void addClass() {
 		System.out.println("학생의 학번을 입력 하세요. >>>");
 		int studentNumber = input.nextInt(); // 학번 입력받음
 		
@@ -85,7 +85,7 @@ public class StudentManage {
 
 	}
 
-	private static void setClass(String message, Student newStudent, boolean check) {
+	void setClass(String message, Student newStudent, boolean check) {
 		System.out.println(message);
 		System.out.println("1. JAVA / 2. PYTHON / 3. C");
 		int index = input.nextInt() - 1;
@@ -97,7 +97,7 @@ public class StudentManage {
 	}
 
 	// 4. 성적 입력 메뉴
-	public static void setScore() {
+	void setScore() {
 		System.out.println("학생의 학번을 입력 하세요. >>>");
 		int studentNumber = input.nextInt(); // 학번 입력받음
 		
@@ -108,13 +108,18 @@ public class StudentManage {
 		}
 		
 		while(true) {
-			System.out.println("성적을 입력/수정할 과목을 선택하세요. 1. JAVA / 2. PYTHON / 3. C / 4. 종료");
+			System.out.println("성적을 입력/수정할 과목을 선택하세요.");
+//			System.out.println("성적을 입력/수정할 과목을 선택하세요. 1. JAVA / 2. PYTHON / 3. C / 4. 종료");
+			for(int i = 0; i < Student.getClassName().length; i++) {
+				System.out.println(i+1 + ". " + Student.getClassName()[i] + " / ");
+			}
+			System.out.println((Student.getClassName().length+1) + ". 종료 >>> ");
 			int classMenu = input.nextInt();
-			if(classMenu == 4) { // 종료 체크
+			if(classMenu == Student.getClassName().length+1) { // 종료 체크
 				break; // While문 종료
 			}
 			if(!newStudent.getClassCheck()[classMenu-1]) {//미신청 체크
-				System.out.println(className[classMenu-1] + "과목은 미신청 과목입니다!");
+				System.out.println(Student.getClassName()[classMenu-1] + "과목은 미신청 과목입니다!");
 				continue; // 미신청이기 때문에 처음으로 되돌아간다
 			}
 			System.out.println("성적을 입력하세요 >>>");
@@ -125,12 +130,12 @@ public class StudentManage {
 			}
 			// 정상적인 괌고과 성적이 입력이 된 경우
 			newStudent.setClassScore(classMenu-1, score); // 해당 학생의 Score 를 업데이트 한다.
-			System.out.println(className[classMenu-1] + "성적 입력이 완료 되었습니다."); // 출력
+			System.out.println(Student.getClassName()[classMenu-1] + "성적 입력이 완료 되었습니다."); // 출력
 		}
 	}
 
 	//5. 학생 정보 조회 메뉴
-	public static void informStudent() {
+	void informStudent() {
 		System.out.println("메뉴를 선택 해 주세요. 1. 특정 학생만 / 2. 전체 학생");
 		int menu = input.nextInt();
 		switch(menu) {
@@ -146,44 +151,67 @@ public class StudentManage {
 
 	
 
-	private static void One() {
+	private void One() {
 		System.out.println("학생의 학번을 입력 하세요");
 		int studentNumber = input.nextInt(); // 학번 입력 받음
-		
+//		Student newStudent = Studnet(studentNumber);
 		Student newStudent = findStudentInform(studentNumber);
 		if(newStudent == null) { //만약 기본에 학생의 정보가 없다면
 			System.out.println("Error : 학생이 존재하지 않습니다!!!");
-			return; // 메소드 종료
+			return; // 메소드 종료			
 		}
-		
-		System.out.println("학번 : " + newStudent.getStudentNumber());
-		System.out.println("이름 : " + newStudent.getName());
-		System.out.println("전화번호 : " + newStudent.getPhoneNumber());
-		System.out.println("메모 : " + newStudent.getMemo());
+		info(newStudent);
+	}
+//		boolean[] classCheck = newStudent.getClassCheck();
+//		int[] classScore = newStudent.getClassScore();
+//		info2(newStudent.getClasscheck(), newStudent.getClassScore());
+
+
+	private void All() {
+		for (Student student : students) {
+			info(student);
+		}
+	}
+//			boolean[] classCheck = student.getClassCheck();
+//			int[] classScore = student.getClassScore();
+//			info2(student.getClasscheck(), student.getClassScore());
+	
+	
+	
+//	void info2(boolean[] classCheck, int[] classScore) {
+//		for (int i = 0; i < classCheck.length; i++) {
+//			if (classCheck[i]) {
+//				System.out.println("과목명: " + className[i] + " / 성적 : " + classScore[i]);
+//			}
+//		}
+//	}
+	
+	void info(Student student) {
+		System.out.println("학번 : " + student.getStudentNumber());
+		System.out.println("이름 : " + student.getName());
+		System.out.println("전화번호 : " + student.getPhoneNumber());
+		System.out.println("메모 : " + student.getMemo());
 		System.out.println("현재 수강중인 과목과 성적 >>>");
-		boolean[] classCheck = newStudent.getClassCheck();
-		int[] classScore = newStudent.getClassScore();
+		boolean[] classCheck = student.getClassCheck();
+		int[] classScore = student.getClassScore();
 		for (int i = 0; i < classCheck.length; i++) {
 			if (classCheck[i]) {
-				System.out.println("과목명: " + className[i] + " / 성적 : " + classScore[i]);
+				System.out.println("과목명: " + Student.getClassName()[i] + " / 성적 : " + classScore[i]);
 			}
 		}
 	}
 
-	private static void All() {
-		for (Student student : students) {
-			System.out.println("학번 : " + student.getStudentNumber());
-			System.out.println("이름 : " + student.getName());
-			System.out.println("전화번호 : " + student.getPhoneNumber());
-			System.out.println("메모 : " + student.getMemo());
-			System.out.println("현재 수강중인 과목과 성적 >>>");
-			boolean[] classCheck = student.getClassCheck();
-			int[] classScore = student.getClassScore();
-			for (int i = 0; i < classCheck.length; i++) {
-				if (classCheck[i]) {
-					System.out.println("과목명: " + className[i] + " / 성적 : " + classScore[i]);
-				}
-			}
-		}
-	}
+
+	
+	
+	
+
+//	void info(boolean[] classCheck, int[] classScore) { //학생조회메서드
+//		for (int i = 0; i < classCheck.length; i++) {
+//			if(classCheck[i]) {
+//				System.out.println("과목명 : " + className[i] + "/ 성적 : " + classScore[i]);				
+//			}
+//		}
+//	}
+
 }

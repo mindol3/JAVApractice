@@ -3,8 +3,9 @@ package javaPractice.ch_11.School;
 public class Student extends Person {
 	private int studentNumber; // 학번
 	// 학생이 듣고있는 수업의 정보 (자바, 파이썬, C)
-	private boolean[] classCheck = {false, false, false}; // 수강 신청을 하면 true로 변경
-	private int[] classScore = {0, 0, 0}; // 각 과목 성적
+	private static String[] className = {"JAVA", "PYTHON", "C", "HTML", "CSS"};
+	private boolean[] classCheck = new boolean[className.length];  // 수강 신청을 하면 true로 변경
+	private int[] classScore = new int[className.length]; // 각 과목 성적
 	
 	//Student 의 생성자
 	public Student(int studentNumber) {
@@ -33,6 +34,12 @@ public class Student extends Person {
 	
 	public void setStudentNumber(int studentNumber) {
 		this.studentNumber = studentNumber;
+	}
+	public static String[] getClassName() {
+		return className;
+	}
+	public static void setClassName(String[] className) {
+		Student.className = className;
 	}
 	
 	

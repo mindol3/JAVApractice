@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AccountManager {
-	private final String ERROR_NOT_FIND_ID = "입력하신 계좌번호는 존재하지 않는 번호 입니 다.";
+	private final String ERROR_NOT_FIND_ID = "입력하신 계좌번호는 존재하지 않는 번호 입니다.";
 	private ArrayList<Account> list;
 	private Scanner stdIn;
 	
@@ -43,14 +43,19 @@ public class AccountManager {
 		long money = stdIn.nextLong();
 		
 		// 해당 계좌 찾기
-		for(Account account : list) {
-			if(account.getId() == id) {// 동일한 계좌가 있다면.
-				account.setBalance(money + account.getBalance());
-				System.out.println("입금완료 되었습니다.");
-				return;
-			}
+//		for(Account account : list) {
+//			if(account.getId() == id) {// 동일한 계좌가 있다면.
+//				account.setBalance(money + account.getBalance());
+//				System.out.println("입금완료 되었습니다.");
+//				return;
+//			}
+//		}
+//		System.out.println("해당 계좌번호가 존재하지 않습니다.");
+		Account account = findAccount(id);
+		if(account != null) {
+			account.setBalance(money + account.getBalance());
+			System.out.println("입금완료 되었습니다.");
 		}
-		System.out.println("해당 계좌번호가 존재하지 않습니다.");
 	}
 	void withdraw() {
 		System.out.println("계좌번호: ");

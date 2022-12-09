@@ -7,6 +7,7 @@ public class SchoolManageView {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
+		StudentManage manager = new StudentManage();
 		System.out.println("학생 관리 프로그램을 시작합니다.");
 		
 		while(true) {
@@ -16,23 +17,23 @@ public class SchoolManageView {
 			switch(menu) {
 				case 1 :
 					System.out.println("학생 추가 및 수정 메뉴 입니다.");
-					StudentManage.addStudent();
+					manager.addStudent();
 					break;
 				case 2 :
 					System.out.println("학생 삭제 메뉴 입니다.");
-					StudentManage.removeStudent();
+					manager.removeStudent();
 					break;
 				case 3 :
 					System.out.println("수강 신청 메뉴 입니다.");
-					StudentManage.addClass();
+					manager.addClass();
 					break;
 				case 4 :
 					System.out.println("성적 입력 메뉴 입니다.");
-					StudentManage.setScore();
+					manager.setScore();
 					break;
 				case 5 :
 					System.out.println("정보 조회 메뉴 입니다.");
-					StudentManage.informStudent();
+					manager.informStudent();
 					break;
 				case 6 :
 					System.out.println("프로그램을 종료 합니다.");
