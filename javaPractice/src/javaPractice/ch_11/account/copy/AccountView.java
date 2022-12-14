@@ -24,7 +24,7 @@ public class AccountView {
 				manager.withdraw();
 				break;
 			case 4:
-				System.out.println("°èÁÂ¹øÈ£\t¼º¸í\tÀÜ¾×");
+				
 				manager.inquire();
 				break;
 			case 5:
