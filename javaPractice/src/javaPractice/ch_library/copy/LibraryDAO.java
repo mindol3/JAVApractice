@@ -152,8 +152,6 @@ public class LibraryDAO {
 		return list;
 	}
 	public boolean updateLibrary(int id, int num, boolean flag) {
-		// 입금, 출금
-		// flag true : 입금 / false : 출금
 		Statement statement = null;
 		boolean res = false;
 		int upd = 0;
