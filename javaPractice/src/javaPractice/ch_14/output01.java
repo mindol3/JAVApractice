@@ -16,7 +16,7 @@ public class output01 {
 	 append 값이 true이면 파일 스트림을 닫고 다시 생성할 때 파일의 끝에서 이어서 사용. 디폴트 값은 false
 	 
 	 생성자 매개변수로 전달한 파일이 경로에 없으면 FileOutputStream은 파일을 새로 생성.
-	 기존 파일이 있는 경우 append 값이 false이면 처움 부터 새ㅗㄹ 씀. overwrite.
+	 기존 파일이 있는 경우 append 값이 false이면 처움 부터 새로 씀. overwrite.
 	 true이면 기존 내용 맨 뒤에 연결해서 씀. append
 	 * */
 	public static void main(String[] args) {
